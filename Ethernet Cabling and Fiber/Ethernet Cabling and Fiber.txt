@@ -1,0 +1,27 @@
+Lab: Ethernet Cabling and Fiber
+
+What I learned:
+- Without Auto MDI-X, same device types require crossover cables.
+- Different device types generally use straight-through cables.
+- Copper Ethernet has a typical maximum segment length of 100 m.
+- Multimode fiber supports longer distances than copper.
+- Single-mode fiber supports longer distances than multimode.
+
+Ethernet pinout:
+- MDI (PC/Router): TX = 1,2 | RX = 3,6
+- MDI-X (Switch): TX = 3,6 | RX = 1,2
+
+
+R1 ↔ R2
+50 m
+Crossover
+Reason: Router-to-router connection and Auto MDI-X is disabled.
+
+R1 ↔ R3
+3 km
+Fiber
+Reason: Copper Ethernet cannot support this distance.
+
+SW1 ↔ SW2
+Crossover
+Reason: Switch-to-switch connection with Auto MDI-X disabled.
